@@ -1,0 +1,37 @@
+body{
+    background-color: #f1f5fd;
+    color: #1f3a5f;
+    margin: 0;
+    padding: 0px;
+}
+.header {
+    color: #ffffff;
+    background-color: #18304F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.links {
+    display: flex;
+    gap: 10px;
+}
+.links a {
+    background-color: #274d7e;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+.links a:hover {
+    background-color: #152b47;
+}
+h1{
+    color: #ffffff;
+    text-align: center;
+}
+main,
+footer{
+    padding: 20px;
+}
