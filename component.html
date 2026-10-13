@@ -6,9 +6,9 @@
     <meta name="color-scheme" content="light dark" />
     <title>Components | Mostafa Studio</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="theme.js"></script>
   </head>
   <body>
+    <input class="theme-toggle-input" type="checkbox" id="theme-toggle" aria-label="Toggle dark mode" />
     <header class="header">
       <h1>Mostafa Studio Components</h1>
       <div class="header-controls">
@@ -18,10 +18,9 @@
           <a href="contact.html">Contact</a>
           <a href="component.html" aria-current="page">Components</a>
         </nav>
-        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <label class="theme-toggle" for="theme-toggle" aria-label="Toggle dark mode">
           <span class="theme-toggle-icon" aria-hidden="true"></span>
-          <span class="theme-toggle-label">Dark Mode</span>
-        </button>
+        </label>
       </div>
     </header>
     <main id="components">

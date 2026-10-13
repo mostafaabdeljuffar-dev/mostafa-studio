@@ -23,7 +23,7 @@
     font-family: Arial, sans-serif;
 }
 
-body.dark-mode {
+body:has(.theme-toggle-input:checked) {
     color-scheme: dark;
     --page-bg: #111a27;
     --surface: #1b293a;
@@ -45,12 +45,6 @@ body.dark-mode {
     --info-text: #b4d4ff;
     --toggle-bg: #26384d;
     --toggle-text: #e4edf8;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
-    }
 }
 
 * {
@@ -87,15 +81,20 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     border: 1px solid var(--border);
     background: var(--toggle-bg);
     color: var(--toggle-text);
     border-radius: 999px;
-    padding: 8px 14px;
-    font-weight: 700;
+    width: 42px;
+    height: 42px;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .theme-toggle-icon {
@@ -116,7 +115,7 @@ body {
     border-radius: 50%;
 }
 
-body:not(.dark-mode) .theme-toggle-icon {
+body:not(:has(.theme-toggle-input:checked)) .theme-toggle-icon {
     background: #f8b700;
     box-shadow:
         0 -9px 0 -5px #f8b700,
@@ -129,26 +128,22 @@ body:not(.dark-mode) .theme-toggle-icon {
         6px 6px 0 -5px #f8b700;
 }
 
-body.dark-mode .theme-toggle-icon {
+body:has(.theme-toggle-input:checked) .theme-toggle-icon {
     background: currentColor;
     box-shadow: none;
     transform: rotate(-20deg);
 }
 
-body.dark-mode .theme-toggle-icon::before {
+body:has(.theme-toggle-input:checked) .theme-toggle-icon::before {
     inset: 3px 3px 3px 8px;
     background: var(--toggle-bg);
 }
 
-body.dark-mode .theme-toggle-icon::after {
+body:has(.theme-toggle-input:checked) .theme-toggle-icon::after {
     inset: 0;
     background: transparent;
     box-shadow: -6px 0 0 1px var(--toggle-bg);
     transform: translateX(3px);
-}
-
-.theme-toggle-label {
-    display: none;
 }
 
 .links {
