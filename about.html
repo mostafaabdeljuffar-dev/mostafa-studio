@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mostafa Studio</title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="theme.js"></script>
   </head>
   <body>
     <header class="header">
       <h1>(About) Mostafa Studio</h1>
-      <nav class="links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="header-controls">
+        <nav class="links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="component.html">Components</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-label">Dark Mode</span>
+        </button>
+      </div>
     </header>
     <main>
       <h2>I Mostafa ElAshry</h2>
@@ -22,12 +30,13 @@
         <li>HTML</li>
         <li>CSS</li>
       </ul>
-      <table>
+      <table class="table">
+        <caption>Mostafa Studio Courses</caption>
         <thead>
           <tr>
-            <th>Course</th>
-            <th>Day</th>
-            <th>Room</th>
+            <th scope="col">Course</th>
+            <th scope="col">Day</th>
+            <th scope="col">Room</th>
           </tr>
         </thead>
         <tbody>

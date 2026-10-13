@@ -5,58 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mostafa Studio</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="theme.js"></script>
 </head>
 <body>
     <header class="header">
-        <h1>(Contact) Mostafa Studio</h1>
-      <nav class="links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <h1>(Contact) Mostafa Studio</h1>
+      <div class="header-controls">
+        <nav class="links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="component.html">Components</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-label">Dark Mode</span>
+        </button>
+      </div>
     </header>
     <main>
         <h2>Contact </h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="Age">Age:</label>
-            <input type="number" id="Age" name="Age" min="10" required><br><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="01xxxxxxxxx" required><br><br>
-
-            <label for="Date">Date:</label>
-            <input type="date" id="Date" name="Date" required><br><br>
-
-            <label for="Services">Services:</label>
-            <select id="Services" name="Services" required>
-                <option value="">General Inquiry</option>
-                <option value="support">Technical Support</option>
-                <option value="feedback">Feedback</option>
-            </select><br><br>
-
-            <label>Gender:</label><br>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br><br>
-
-            <label>Interests:</label><br>
-            <input type="checkbox" id="news" name="interests" value="newsletter">
-            <label for="news">Subscribe to Newsletter</label><br>
-            <input type="checkbox" id="updates" name="interests" value="updates">
-            <label for="updates">Receive Product Updates</label><br><br>
-
-
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-
-            <button type="submit" value="Submit">Submit</button>
+        <form class="contact-form" action="#" method="post">
+            <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="10" required>
+            </div>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="01xxxxxxxxx" autocomplete="tel" required>
+            </div>
+            <div class="form-field">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-field">
+                <label for="services">Services</label>
+                <select id="services" name="services" required>
+                    <option value="">Choose a service</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+            </div>
+            <fieldset class="choice-group">
+                <legend>Gender</legend>
+                <label class="choice" for="male">
+                    <input type="radio" id="male" name="gender" value="male">
+                    Male
+                </label>
+                <label class="choice" for="female">
+                    <input type="radio" id="female" name="gender" value="female">
+                    Female
+                </label>
+            </fieldset>
+            <fieldset class="choice-group">
+                <legend>Interests</legend>
+                <label class="choice" for="news">
+                    <input type="checkbox" id="news" name="interests" value="newsletter">
+                    Subscribe to Newsletter
+                </label>
+                <label class="choice" for="updates">
+                    <input type="checkbox" id="updates" name="interests" value="updates">
+                    Receive Product Updates
+                </label>
+            </fieldset>
+            <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
         </form>
     </main>
     <footer>

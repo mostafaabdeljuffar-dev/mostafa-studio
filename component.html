@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Components | Mostafa Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="theme.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Mostafa Studio Components</h1>
+      <div class="header-controls">
+        <nav class="links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="component.html" aria-current="page">Components</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+          <span class="theme-toggle-label">Dark Mode</span>
+        </button>
+      </div>
+    </header>
+    <main id="components">
+      <h2>UI Components</h2>
+      <p class="component-intro">
+        A responsive collection of reusable form elements, a CSS-only modal, and
+        status alerts. The colors adapt automatically to your device's light or
+        dark appearance setting.
+      </p>
+
+      <div class="component-grid">
+        <section class="component-card" aria-labelledby="forms-heading">
+          <h3 id="forms-heading">Form Elements</h3>
+          <form class="form-stack" action="#" method="get">
+            <div class="form-field">
+              <label for="demo-name">Name</label>
+              <input
+                id="demo-name"
+                name="name"
+                type="text"
+                placeholder="e.g. Alex Morgan"
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="demo-email">Email address</label>
+              <input
+                id="demo-email"
+                name="email"
+                type="email"
+                placeholder="alex@example.com"
+                autocomplete="email"
+                aria-describedby="email-help"
+              />
+              <p class="form-help" id="email-help">
+                We'll only use this to reply to your message.
+              </p>
+            </div>
+
+            <div class="form-field">
+              <label for="demo-service">Service</label>
+              <select id="demo-service" name="service">
+                <option value="">Choose a service</option>
+                <option value="design">Web design</option>
+                <option value="development">Development</option>
+                <option value="support">Technical support</option>
+              </select>
+            </div>
+
+            <fieldset class="choice-group">
+              <legend>Updates</legend>
+              <label class="choice">
+                <input type="checkbox" name="updates" value="newsletter" />
+                Newsletter
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="updates" value="product" />
+                Product news
+              </label>
+            </fieldset>
+
+            <button type="submit">Send request</button>
+          </form>
+        </section>
+
+        <section class="component-card" aria-labelledby="modal-heading">
+          <h3 id="modal-heading">CSS-only Modal</h3>
+          <p>
+            Open the dialog using the link. The <code>:target</code> selector
+            displays it without JavaScript.
+          </p>
+          <a class="button" href="#demo-modal">Open modal</a>
+          <p class="form-help">
+            This lightweight example is best for simple content; production
+            dialogs should also manage keyboard focus.
+          </p>
+        </section>
+
+        <section class="component-card" aria-labelledby="alerts-heading">
+          <h3 id="alerts-heading">Alerts</h3>
+          <div class="alert alert-success" role="status">
+            <strong>Success:</strong> Your changes have been saved.
+          </div>
+          <div class="alert alert-info" role="status">
+            <strong>Info:</strong> A new version is available.
+          </div>
+          <div class="alert alert-warning" role="status">
+            <strong>Warning:</strong> Your session will expire soon.
+          </div>
+          <div class="alert alert-error" role="alert">
+            <strong>Error:</strong> We couldn't complete your request.
+          </div>
+        </section>
+      </div>
+
+      <div class="modal" id="demo-modal">
+        <a class="modal-backdrop" href="#components" aria-label="Close modal"></a>
+        <section
+          class="modal-panel"
+          role="dialog"
+          aria-labelledby="modal-title"
+          tabindex="-1"
+        >
+          <a class="button modal-close" href="#components">Close</a>
+          <h3 id="modal-title">A CSS-only dialog</h3>
+          <p>
+            This modal opens and closes with URL fragments and CSS, so it needs
+            no JavaScript.
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2026 Mostafa Studio. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
